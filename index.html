@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <link href="assets/images/SWER3_FAVI.png" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/images/SWER3_FAVI.png" rel="apple-touch-icon">
+
+  
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: black;
+        }
+        .video {
+            position: fixed;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -o-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            top: 50%;
+            left: 50%;
+            min-width: 100vw;
+            min-height: 100vh;
+            width: auto;
+            height: 100vh;
+            z-index: -100;
+        }
+    </style>
+</head>
+<body>
+    <video class="video" poster="assets/images/Rectangle-45-p-800.png"  autoplay muted>
+        <source src="assets/video/splash-screen.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        setInterval(function () { 
+            location.href="player-login.html";   
+        }, 8000);
+    </script>
+</body>
+</html>
